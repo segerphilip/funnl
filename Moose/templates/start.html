@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>funnl</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/css/startstyle.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../static/css/scrolling-nav.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#positioning").fadeIn("slow")
+            $("#funnlbutton").click(function(){
+                $("#funnlsearch").fadeOut("fast", function(){
+                    $('#positioning').slideDown(1000)
+                    $('#gallery-background').fadeOut("slow")
+                });
+                
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+
+
+    
+    <div id="gallery-background"></div>
+    <!--<img class=".img-responsive" src="images/background.jpg">-->
+    <div id="positioning" style="display:none">
+        <p class="heading">welcome to funnl</p>
+        <p class="subheading">smart news, unified</p>
+
+        <form id = 'funnlsearch' action="." method="POST">
+            <input class = 'input' type="text" name="search" placeholder="search news">
+            <input id='funnlbutton' class = 'button' type="submit" value="funnl">
+        </form>
+    </div> 
+
+    <div id = "loading" style="width:800px; margin:0 auto;">
+        <img src="../static/images/loader.gif">
+    </div>
+    
+
+    <!-- jQuery -->
+    <script src="../static/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../static/js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="../static/js/jquery.easing.min.js"></script>
+    <script src="../static/js/scrolling-nav.js"></script>
+
+</body>
+
+</html>
